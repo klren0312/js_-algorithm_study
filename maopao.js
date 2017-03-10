@@ -1,5 +1,5 @@
 /*
- * js冒泡排序
+ * js冒泡排序Bubble Sort
  *
  */
 var array = [1,3,4,5,32,4,2,5]
