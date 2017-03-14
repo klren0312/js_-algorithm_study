@@ -22,3 +22,6 @@
 >1.charu.js
 2.charu2.js
 
+##6.快速排序
+>1.kuaisu.js
+
