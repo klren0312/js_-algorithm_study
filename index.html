@@ -9,38 +9,35 @@
 </body>
 <script>
 	
-		var arr = [443,3,444,4];
 
-		function test(arr,t){
-		  var j=0;
-		  var ren = 0;
-		  for(let i=0;i<arr.length;i++){
-		    if(parseInt(arr[i]) == t){
-		            j++;
-		      }
-		  }
-		  var c=1;
-		  for(let i=0;i<j;i++){
-		    ren +=parseInt(t)*c;
-		    c*=10;
-		  }
-		  return ren;
+var array = [5,6,7,2,3,4,89,45,21,47];
+
+function charu(array) {
+	for(let i = 1;i<array.length;i++){
+		let key = array[i],left = 0,right = i - 1;
+		while(left <= right){
+			let middle = parseInt((left + right)/2);
+			if (key < array[middle]) {
+				right = middle -1;
+			}else{
+				left = middle + 1;
+			}
 		}
-		 
-	
- 
-    
-        var a = arr[0].toString();
-        var b = arr[2].toString();
-        var PA =0;
-        var PB =0;
- 
-        PA = test(a,arr[1]);
- 
-        PB = test(b,arr[3]);
- 
+		for(let j = i - 1;j>=left;j--){
+			array[j+1] = array[j];
+		}
+		array[left] = key;
+	}
+	return array;
+}
 
-        console.log(PA+PB);
+function bianli(array){
+  for(let i = 0; i < array.length; i++){
+    console.log(array[i]);
+  }
+}
+
+bianli(charu(array));
  
 </script>
 </html>
