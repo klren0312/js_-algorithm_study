@@ -29,4 +29,4 @@
 > 1.throttle.js
 
 ## 8.防抖函数
-> 1.
+> 1.debounce.js
